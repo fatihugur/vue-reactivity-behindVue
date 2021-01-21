@@ -29,6 +29,12 @@ const app = Vue.createApp({
   mounted() {
     console.log("mounted()");
   },
+  beforeUpdate() {
+    console.log("beforeUpdate()");
+  },
+  updated() {
+    console.log("updated()");
+  },
 });
 
 app.mount("#app");
