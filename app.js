@@ -13,7 +13,21 @@ const app = Vue.createApp({
       // this.message = this.currentUserInput;
       this.message = this.$refs.userText.value;
       // console.dir(this.$refs.userText);
+      // console.log(this.$refs.userText);
     },
+  },
+
+  beforeCreate() {
+    console.log("beforeCreate()");
+  },
+  created() {
+    console.log("created()");
+  },
+  beforeMount() {
+    console.log("beforeMount()");
+  },
+  mounted() {
+    console.log("mounted()");
   },
 });
 
@@ -48,4 +62,4 @@ const proxy = new Proxy(data, handler);
 
 proxy.message = "Hello!!!!";
 
-console.log(proxy.longMessage);
+// console.log(proxy.longMessage);
